@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage[danish]{babel}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{placeins}
+\usepackage{graphicx}
+
+\usepackage[utf8]{inputenc}
+
+\title{Afleveringsopgave1}
+\author{Nicolas Kaveh Vahman s164404\\
+Michelle Westphal Sørensen s164446\\
+Marie-Louise Wolfsberg Schmidt s164417}\\
+\date{30. September 2016}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Dette dokument omhandler boblesortering. Der beskrives algoritmen
+og præsenteres en kompleksitetsanalyse.
+
+\end{abstract}
+\section{Introduktion}
+
+
+Boblesortering (eng. bubble sort) er en populær sorteringsalgoritme og er en af
+de simpleste algoritmer at forstå og implementere. Dog er den ikke en særlig
+effektiv sorteringsalgoritme\footnote{Mere om dette i “Algoritmer og Datastrukturer 1”}
+hverken for store eller små lister, og den anvendes
+sjældent i praksis. Boblesortering sorterer, som navnet antyder, elementerne i
+en liste ved at boble hvert element gennem listen til sin rette plads i listen.
+
+\subsection{Pseudokode}
+
+\begin{verbatim}
+    
+Wikipedia [2] giver følgende pseudokode for boblesortering.
+
+procedure bubbleSort( A : list of sortable items ) defined as:
+    do
+      swapped := false
+      for each i in 0 to length(A) - 2 inclusive do:
+        if A[i] > A[i+1] then
+         swap( A[i], A[i+1] )
+         swapped := true
+       end if
+     end for
+   while swapped
+end procedure
+\end{verbatim}
+
+
+
+
+
+
+
+\section{Analyse af boblesortering}
+
+Antallet af sammenligninger, som boblesortering udfører på en tabel af længde n,
+er i værste fald
+
+\[\sum\limits_{i = 1}^{n - 1} {i = 1 + 2 + 3 + ... + n - 1 = n\frac{{n(n - 1)}}{2}.} \]
+
+I bedste fald er antallet. Se tabel 1
+
+
+
+\begin{figure}[H]
+    \centering
+     \label{fig:my_label}
+\includegraphics[scale=1.0]{Udklipboble.JPG}
+\caption{Illustration af boblesortering}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\begin{tabular}{|r|l|}
+\hline
+7C0 & hexadecimal\\
+\hline
+3700 & octal\\
+\hline
+11111000000 & binær\\
+\hline
+1984 & decimal\\
+\hline
+
+\end{tabular}    
+\end{figure}
+
+
+
+
+\section{Videre læsning}
+For en komplet introduktion til boblesortering og relaterede sorteringsalgoritmer
+se Knuth [1].
+
+
+\section{Litteratur}
+
+
+\begin{thebibliography}{1}
+
+\bibitem{donald}
+Donald Knuth,
+The Art of Computer Programming
+Volume 3. Addison - Wesly
+
+
+\bibitem{wiki}
+
+\url{https://en.wikipedia.org/wiki/Bubble_sort}
+
+\end{thebibliography}
+
+\end{document}
